@@ -36,8 +36,9 @@ int main (int argc, char **argv)
 
 int read_or_write()
 {
+    FILE *fp;
     int num;
-    printf("Enter 1 for sending message and 2 for reading message:");
+    printf("Enter 1 for sending message and 2 for reading message. 3 for the entire transcript.:");
     scanf("%d", &num);
     if(num == 1)
     {
@@ -45,6 +46,9 @@ int read_or_write()
     	char *intro = malloc(sizeof(char) * 140);
     	printf("Enter a message:\n");
     	scanf("%s", intro);
+       fp = fopen("Transcript.txt", "a+");
+       fprintf(fp, "%s\n", intro);
+       fclose(fp); 
     	create_and_write_shared_memory(key, intro, strlen(intro));
     	return 0;
     }
@@ -62,6 +66,18 @@ int read_or_write()
        }
        printf("%s\n", (char *)read_buffer);
     }   
+    else if(num == 3)
+    {
+    	char c;
+    	fp = fopen("Transcript.txt", "r+");
+    	c = fgetc(fp);
+    	while(c != EOF)
+    	{
+        	printf("%c", c);
+        	c = fgetc(fp);
+    	}
+    	fclose(fp);  
+    }
     else
     {
     	printf("Enter either 1 or 2.");
