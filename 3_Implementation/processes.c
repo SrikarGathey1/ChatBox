@@ -80,7 +80,7 @@ int read_or_write()
     }
     else
     {
-    	printf("Enter either 1 or 2.");
+    	printf("Invalid Input.\n Enter either 1, 2 or 3.");
     }
     return 0;
 }
