@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <sys/wait.h>
+#include <string.h>
 
 extern int read_from_shared_memory (char *mmap_key, char *buffer, unsigned int buff_size, unsigned int bytes_to_read);
 extern int create_and_write_shared_memory (char *mmap_key, char *value, int size);
