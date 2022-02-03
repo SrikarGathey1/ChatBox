@@ -20,7 +20,7 @@ int main (int argc, char **argv)
         wait(NULL);
         char *parent = malloc(sizeof(char) * 140);
     	printf("Enter the name of the parent:\n");	
-        scanf("%s", parent);
+        scanf("%255s", parent);
     	read_or_write();
     	exit(p);
     }
@@ -28,7 +28,7 @@ int main (int argc, char **argv)
     {
         char *child = malloc(sizeof(char) * 140);
     	printf("Enter the name of the child:\n");
-    	scanf("%s", child);
+    	scanf("%255s", child);
     	read_or_write();
     	exit(0);
     }
@@ -46,7 +46,7 @@ int read_or_write()
     	char *key = "/common";
     	char *intro = malloc(sizeof(char) * 140);
     	printf("Enter a message:\n");
-    	scanf("%s", intro);
+    	scanf("%255s", intro);
        fp = fopen("Transcript.txt", "a+");
        fprintf(fp, "%s\n", intro);
        fclose(fp); 
@@ -55,7 +55,6 @@ int read_or_write()
     }
     else if(num == 2)
     {
-       char *decide; 
        char *key = "/common";
        char read_buffer[128];
        memset(read_buffer, 0, 128);
