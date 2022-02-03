@@ -1,16 +1,16 @@
-3_Implementation/processes.c:22:9: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
+3_Implementation/processes.c:23:9: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
         scanf("%s", parent);
         ^
-3_Implementation/processes.c:30:6: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
+3_Implementation/processes.c:31:6: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
      scanf("%s", child);
      ^
-3_Implementation/processes.c:48:6: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
+3_Implementation/processes.c:49:6: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
      scanf("%s", intro);
      ^
-3_Implementation/processes.c:74:12: warning: Storing fgetc() return value in char variable and then comparing with EOF. [checkCastIntToCharAndBack]
+3_Implementation/processes.c:75:12: warning: Storing fgetc() return value in char variable and then comparing with EOF. [checkCastIntToCharAndBack]
      while(c != EOF)
            ^
-3_Implementation/processes.c:57:14: style: Unused variable: decide [unusedVariable]
+3_Implementation/processes.c:58:14: style: Unused variable: decide [unusedVariable]
        char *decide;
              ^
 nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
