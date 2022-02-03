@@ -4,8 +4,8 @@
 
 |Test ID|                            Description                           |  Exp I/P   |  Exp O/P  |  Actual Output |  Type Of Test   |
 |:-----:|:----------------------------------------------------------------:|:----------:|:---------:|:--------------:|:---------------:|
-| H_01  | Both processes can send a message of upto 140 characters to each other.                 |A message from child to parent.      |Child reads the message from the parent.      |Child reads the message and prints it to standard output and to the transcript file   |Requirement Based |
-| H_02  | A transcript that records both the processes messages is provided.             |3|  Transcript of the conversation.      |Transcript of the conversation. | Requirement Based |
+| H_01  | Both processes can send a message of upto 140 characters to each other.                 |A message from child to parent.      |Child reads the message from the parent.      |Child reads the message and prints it to standard output and to the transcript file   |Requirements Based |
+| H_02  | A transcript that records both the processes messages is provided.             |3|  Transcript of the conversation.      |Transcript of the conversation. | Requirements Based |
 | H_03  | Illegal inputs are pointed out to the user.   | 4  |Invalid Input. Enter either 1, 2 or 3.|Invalid Input. Enter either 1, 2 or 3. | Boundary Based |
         
 
